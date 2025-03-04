@@ -3,9 +3,6 @@ import streamlit as st
 
 st.set_page_config(page_title="Password Strength Checker by Zahra Naveed", page_icon="🌘", layout="centered")
 
- 
-import streamlit as st
-
 st.markdown("""
     <style>
         .main { 
@@ -15,11 +12,19 @@ st.markdown("""
         .stTextInput {
             width: 60% !important; 
             margin: auto; 
-            border: 2px solid #3498db;  
+            border: 2px solid #000;  /* Black border */
             border-radius: 8px;
             padding: 10px;
             font-size: 16px;
             background-color: #f3f6f9;  
+            color: #2c3e50;
+        }
+
+        .stTextInput input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
             color: #2c3e50;
         }
 
