@@ -2,7 +2,8 @@ import re
 import streamlit as st
 
 st.set_page_config(page_title="Password Strength Checker by Zahra Naveed", page_icon="🌘", layout="centered")
-st.markdown("""
+
+   st.markdown("""
 <style>
     .main { 
         text-align: center;
@@ -11,32 +12,40 @@ st.markdown("""
     .stTextInput {
         width: 60% !important; 
         margin: auto; 
-        border: 2px solid #4CAF50;
+        border: 2px solid #3498db;  /* Blue border */
         border-radius: 8px;
         padding: 10px;
         font-size: 16px;
-        background-color: #f9f9f9;
+        background-color: #f3f6f9;  /* Light Grey */
+        color: #2c3e50;  /* Dark Text */
+    }
+    
+    .stButton {
+        display: flex;
+        justify-content: center;
     }
     
     .stButton button {
-        width: 50%; 
-        background: linear-gradient(135deg, #6a11cb, #2575fc); 
-        color: white; 
+        width: 50%;
+        background: linear-gradient(135deg, #2ecc71, #27ae60);  /* Green Gradient */
+        color: white;
         font-size: 18px;
+        font-weight: bold;
         border: none;
         border-radius: 8px;
         padding: 12px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease-in-out;
     }
     
     .stButton button:hover {
-        background: linear-gradient(135deg, #ff416c, #ff4b2b);
-        transform: scale(1.05);
-        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(135deg, #e74c3c, #c0392b);  /* Red Gradient */
+        transform: scale(1.07);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 st.title(" 🔐 Password Strength Generator")
